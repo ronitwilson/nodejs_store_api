@@ -18,7 +18,7 @@ app.use(errHandler)
 
 
 
-const start  =  () => {
+const start  =  async () => {
     try {
         app.listen(port, () => console.log(`listening on ${port}`))
     } catch (error) {
