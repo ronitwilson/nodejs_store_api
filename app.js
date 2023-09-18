@@ -1,5 +1,4 @@
 require('dotenv').config()
-
 const express = require('express')
 const notFound = require('./middleware/not-found')
 const errHandler = require('./middleware/error-handler');
