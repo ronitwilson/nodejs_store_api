@@ -1,3 +1,4 @@
+const products = require("../model/products")
 const Product = require("../model/products")
 
 const getAllProductsStatic = async (req, res) => {
@@ -5,8 +6,8 @@ const getAllProductsStatic = async (req, res) => {
 }
 
 const getAllProducts = async (req, res) => {
-    getProduct =await Product.find({})
-    res.status(200).json({getProduct})
+    getProduct =await Product.find({featured: true, name: "a first wooden table"})
+    res.status(200).json({getProduct, nbHits: getProduct.length})
 }
 
 module.exports = {
